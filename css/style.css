@@ -144,6 +144,11 @@ a {
         padding: 0;
         padding-top: 30px;
     }
+    .intro-text {
+        font-size: 2em;
+        font-weight: 500;
+        color: #5365aa;
+    }
 }
 body .footer {
     background-color: #FFFAFA;
