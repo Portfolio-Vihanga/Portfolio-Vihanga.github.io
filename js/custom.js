@@ -22,7 +22,6 @@ jQuery(document).ready(function($){
         if($(".invis")[0]){
             $pPage.removeClass('invis');
             $sCode.removeClass('invis');
-            console.log("hi")
         }        
         $(this).addClass('darken');
     });
