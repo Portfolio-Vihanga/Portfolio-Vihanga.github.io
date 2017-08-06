@@ -9,6 +9,8 @@ jQuery(document).ready(function($){
     var $menu = $('.navbar-menu');
     var $title = $('.project-title');
     var $desc = $('#project-description');
+    var $pPage = $('#pPage');
+    var $sCode = $('#sCode');
 
     $toggle.click(function() {
         $toggle.toggleClass('is-active');
@@ -17,32 +19,49 @@ jQuery(document).ready(function($){
 
     $('.projImg').click(function(){
         $('.darken').removeClass('darken');
+        if($(".invis")[0]){
+            $pPage.removeClass('invis');
+            $sCode.removeClass('invis');
+            console.log("hi")
+        }        
         $(this).addClass('darken');
     });
 
     $('#proj1').click(function(){
         $title.text("KiPow website");
-        $desc.text(kpText)
+        $desc.text(kpText);
+        $pPage.attr('href', 'http://kipowcanada.com/');
+        $sCode.attr('href', 'https://github.com/VihangaR/VihangaR.github.io');
     });
     $('#proj2').click(function(){
         $title.text("My portoflio website");
         $desc.text(poText)
+        $pPage.addClass('invis');
+        $sCode.attr('href', 'https://github.com/VihangaR/Portolio');
     });
     $('#proj3').click(function(){
         $title.text("Blog platform");
         $desc.text(blText)
+        $pPage.attr('href', 'http://www.dreamprojects.club/blogs');
+        $sCode.attr('href', 'https://github.com/VihangaR/BlogPlatform');
     });
     $('#proj4').click(function(){
         $title.text("Chat app");
         $desc.text(chText)
+        $pPage.addClass('invis');
+        $sCode.attr('href', 'https://github.com/VihangaR/Chat_Application');
     });
     $('#proj5').click(function(){
         $title.text("Social media platform");
         $desc.text(smText)
+        $pPage.attr('href', 'http://whispering-cove-71463.herokuapp.com/');
+        $sCode.attr('href', 'https://github.com/VihangaR/Social_Media');
     });
     $('#proj6').click(function(){
-        $title.text("More to come!");
+        $title.text("More to come");
         $desc.text(emText)
+        $pPage.addClass('invis');
+        $sCode.addClass('invis');
     });
 
     // Smooth Scrolling
